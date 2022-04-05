@@ -11,7 +11,7 @@ const Cart = (props) => {
 
     for(const product of cart){
         quantity += product.quantity;
-        total = total + product.price * product.quantity;  //local storage input
+        total = total + product.price * product.quantity;  //local storage input 
         shipping += product.shipping; 
     }
 
@@ -26,6 +26,9 @@ const Cart = (props) => {
             <p>Total Shipping Charge: ${shipping}</p>
             <p>Tax: ${tax}</p>
             <h4>Grand Total: ${grandTotal}</h4>
+            {
+                props.children
+            }
 
 
         </div>
